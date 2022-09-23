@@ -1,5 +1,6 @@
 import "./App.css";
-import Livre from "./components/Livre";
+import Bibliotheque from "./components/Bibliotheque";
+import Header from "./components/Header";
 
 const livres = [
   {
@@ -67,7 +68,8 @@ const livres = [
 function App() {
   return (
     <div className="container">
-      {livres.map(item => <Livre url={item.url} titre={item.titre} prix={item.prix}/>)}
+      <Header />
+     <Bibliotheque listelivres={livres}/>
     </div>
   );
 }
